@@ -54,6 +54,14 @@ In [2]: print(version.__version__)
 pip install git+https://github.com/nyk510/my-awesome-package
 ```
 
+version は tag で管理することが出来ます。例えば v0.510 というタグがありますがこれを install したい場合は suffix として `@v0.510` をつければOKです。
+
+```bash
+pip install git+https://github.com/nyk510/my-awesome-package@v0.510
+```
+
+(ちなみにこれで install すると version が 0.510 になります。試してみてね。)
+
 ### pypi 経由での install (pip install my-package-name 形式)
 
 pypi 経由での公開をすると `pip install my-package-name` でインストールができ pypi 上にも readme が展開されて表示されるようになります。かっこいいですね。

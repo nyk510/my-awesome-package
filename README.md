@@ -48,10 +48,10 @@ In [2]: print(version.__version__)
 
 ### git を使った install
 
-リポジトリを github / gitlab へ upload していれば `git+<my-repo-url>` でインストールを行なうことが出来ます。gitlab の url は `https://gitlab.com/nyker510/my-awesome-package` ですので、以下で install 出来ます。
+リポジトリを github / gitlab へ upload していれば `git+<my-repo-url>` でインストールを行なうことが出来ます。gitlab の url は `https://github.com/nyk510/my-awesome-package` ですので、以下で install 出来ます。
 
 ```bash
-pip install git+https://gitlab.com/nyker510/my-awesome-package
+pip install git+https://github.com/nyk510/my-awesome-package
 ```
 
 ### pypi 経由での install (pip install my-package-name 形式)

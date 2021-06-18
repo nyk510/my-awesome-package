@@ -37,7 +37,7 @@ def get_extra_requires():
 
 
 setup(
-    name='goto-awesome-package',
+    name='my-awesome-package',
     version=get_version(),
     author='nyk510',
     packages=find_packages(),

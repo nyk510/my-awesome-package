@@ -1,4 +1,4 @@
-# GOTO Awesome Package
+# My Awesome Package
 
 GOGOGO!!!
 

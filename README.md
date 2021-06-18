@@ -10,7 +10,7 @@ GOGOGO!!!
 
 local python environment (version >= 3.6)
 
-## Setup (for venv)
+## Setup
 
 Global な python 環境を汚さないように venv 内部で作業するようにします。
 

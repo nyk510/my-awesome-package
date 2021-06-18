@@ -1,4 +1,4 @@
-# My Awesome Package
+# GOTO Awesome Package
 
 GOGOGO!!!
 
@@ -27,9 +27,9 @@ CurrentDirectory `.` を起点として pip install を実行すると現在の 
 pip install -e .
 ```
 
-### check install
+上記をこのプロジェクトのルートで実行すると `goto_tools` が install されます。
 
-ipython で確認。
+### Check Install
 
 ```bash
 08:01:39 in my-awesome-package on  master [?] via my-awesome-package 
@@ -41,8 +41,32 @@ IPython 7.24.1 -- An enhanced Interactive Python. Type '?' for help.
 In [1]: from goto_tools import version
 
 In [2]: print(version.__version__)
-0.510
+0.511
 ```
+
+## 新しい環境へ Install する
+
+### git を使った install
+
+リポジトリを github / gitlab へ upload していれば `git+<my-repo-url>` でインストールを行なうことが出来ます。gitlab の url は `https://gitlab.com/nyker510/my-awesome-package` ですので、以下で install 出来ます。
+
+```bash
+pip install git+https://gitlab.com/nyker510/my-awesome-package
+```
+
+### pypi 経由での install (pip install my-package-name 形式)
+
+pypi 経由での公開をすると `pip install my-package-name` でインストールができ pypi 上にも readme が展開されて表示されるようになります。かっこいいですね。
+公開のためには
+
+1. pypi でアカウントを作成
+2. 作成したアカウントのログイン情報、または APITOKEN を取得
+3. `twine` を使って pypi への upload
+
+という手順を踏みます。詳しくは以下のURLなど参考にしてください。
+
+* Python: Twine を使って PyPI にパッケージをアップロードする: https://blog.amedama.jp/entry/2017/12/31/175036
+* Packaging Python Projects: https://packaging.python.org/tutorials/packaging-projects/
 
 ## Test
 
@@ -54,7 +78,7 @@ In [2]: print(version.__version__)
 pip install -e .[test]
 ```
 
-#### 何が起こっているか
+#### [note] 何が起こっているか
 
 `setup.py` に記述された extra_require へ渡された dict の key == test となるものが install されます。今回のプロジェクトの場合
 
@@ -90,7 +114,6 @@ tests/test_version.py .                                                         
 ============================================ 1 passed in 0.01s ============================================
 ```
 
-## 新しい環境へ Install する
+## CI
 
-このリポジトリを github / gitlab へ upload していればすでに pip でインストールを行なうことが出来ます。
-
+* TODO
